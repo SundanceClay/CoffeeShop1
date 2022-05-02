@@ -4,7 +4,7 @@
 
 namespace CoffeeShopRegistrationLab.Migrations
 {
-    public partial class initialCoffeeShop : Migration
+    public partial class CoffeeShopInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,7 +17,8 @@ namespace CoffeeShopRegistrationLab.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    coffeePreference = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

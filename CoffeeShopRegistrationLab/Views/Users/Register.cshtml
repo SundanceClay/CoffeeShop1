@@ -37,6 +37,16 @@
                 <input asp-for="ConfirmPassword" class="form-control" />
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <p>Check box for coffee preference:</p>
+                    <input class="form-check-input" asp-for="coffeePreference" type="radio" name="coffeePreference" value="CoffeeBlack" /> Coffee Black<br />
+                    <input class="form-check-input" asp-for="coffeePreference" type="radio" name="coffeePreference" value="CoffeeCreamSugar" /> Coffee Cream Sugar<br />
+                    <input class="form-check-input" asp-for="coffeePreference" type="radio" name="coffeePreference" value="CoffeeCreamOnly" /> Coffee Cream Only<br />
+                    <input class="form-check-input" asp-for="coffeePreference" type="radio" name="coffeePreference" value="CoffeeSugarOnly" /> Coffee Sugar Only<br /><br />
+                </label>
+                <span asp-validation-for="coffeePreference" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Register" class="btn btn-primary" />
             </div>

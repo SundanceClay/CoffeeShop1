@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoffeeShopRegistrationLab.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220429155226_initialCoffeeShop")]
-    partial class initialCoffeeShop
+    [Migration("20220502192353_CoffeeShopInitial")]
+    partial class CoffeeShopInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,6 +48,9 @@ namespace CoffeeShopRegistrationLab.Migrations
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("coffeePreference")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

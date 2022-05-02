@@ -48,7 +48,7 @@ namespace CoffeeShopRegistrationLab.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register([Bind("Id,FirstName,LastName,Email,Password,ConfirmPassword")] User customer)
+        public async Task<IActionResult> Register([Bind("Id,FirstName,LastName,Email,Password,ConfirmPassword,coffeePreference")] User customer)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace CoffeeShopRegistrationLab.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Email,Password,ConfirmPassword")] User customer)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Email,Password,ConfirmPassword,coffeePreference")] User customer)
         {
             if (id != customer.Id)
             {

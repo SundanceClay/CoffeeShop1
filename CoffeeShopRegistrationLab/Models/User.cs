@@ -35,5 +35,13 @@ namespace CoffeeShopRegistrationLab.Models
 
         public string ConfirmPassword { get; set; }
 
+        
+        public enum CoffeePreference {
+            CoffeeBlack,
+            CoffeeCreamSugar,
+            CoffeeCreamOnly,
+            CoffeeSugarOnly
+        }
+        public CoffeePreference coffeePreference { get; set; }
     }
 }
