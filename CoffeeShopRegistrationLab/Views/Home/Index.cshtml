@@ -1,9 +1,11 @@
-﻿@{
+﻿@using CoffeeShopRegistrationLab.Views
+@{
     ViewData["Title"] = "Home Page";
+    
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to the Registration Lab.</h1>
+    <h1 class="display-4">Welcome to @Constants.CoffeeShopName.</h1>
     <h2 class="display-4">Use the menu link or click below to register.</h2>
     <p><a asp-area="" asp-controller="Users" asp-action="Register">Register</a></p>
 </div>
